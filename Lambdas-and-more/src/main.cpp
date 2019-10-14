@@ -1,6 +1,9 @@
-#include <iostream>
+#include "functionPointers.h"
+#include "parameterPacks.h"
 
 int main()
 {
-	std::cout << "Hello World" << std::endl;
+	runPointerExample();
+	runParameterPackExample();
+	return 0;
 }
