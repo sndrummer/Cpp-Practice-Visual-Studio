@@ -24,12 +24,18 @@
     <ClCompile Include="src\parameterPacks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lambdas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\functionPointers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\parameterPacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lambdas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
