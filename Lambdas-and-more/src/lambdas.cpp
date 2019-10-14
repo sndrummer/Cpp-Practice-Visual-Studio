@@ -14,7 +14,7 @@ static void forEach(const std::vector<int>& values, const std::function<void(int
 	}
 }
 
-
+//remember that the order for the lambda expression is captures, params, then the function
 int runLambdaTest()
 {
 	std::vector<int> values = { 1, 5, 1, 1, 4 };
