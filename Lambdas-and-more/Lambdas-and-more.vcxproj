@@ -138,15 +138,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\FileWriter.cpp" />
     <ClCompile Include="src\lambdas.cpp" />
     <ClCompile Include="src\functionPointers.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\parameterPacks.cpp" />
+    <ClCompile Include="src\typePunning.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\const_pointers.h" />
+    <ClInclude Include="src\FileWriter.h" />
     <ClInclude Include="src\lambdas.h" />
     <ClInclude Include="src\functionPointers.h" />
+    <ClInclude Include="src\maps.h" />
     <ClInclude Include="src\parameterPacks.h" />
+    <ClInclude Include="src\typePunning.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
