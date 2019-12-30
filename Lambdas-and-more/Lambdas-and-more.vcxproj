@@ -150,9 +150,11 @@
     <ClInclude Include="src\FileWriter.h" />
     <ClInclude Include="src\lambdas.h" />
     <ClInclude Include="src\functionPointers.h" />
+    <ClInclude Include="src\lists.h" />
     <ClInclude Include="src\maps.h" />
     <ClInclude Include="src\parameterPacks.h" />
     <ClInclude Include="src\typePunning.h" />
+    <ClInclude Include="src\vectors.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

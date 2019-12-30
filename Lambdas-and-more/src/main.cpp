@@ -4,6 +4,8 @@
 #include "FileWriter.h"
 #include "const_pointers.h"
 #include "maps.h"
+#include "vectors.h"
+#include "lists.h"
 
 int main()
 {
@@ -15,7 +17,12 @@ int main()
 	// t2.join();
 	//
 	//testConstPointers();
-	testOrderedMap();
-	testUnorderedMap();
+	// testOrderedMap();
+	// testUnorderedMap();
+
+	// vectorPractice();
+
+
+	practiceLists();
 	return 0;
 }
