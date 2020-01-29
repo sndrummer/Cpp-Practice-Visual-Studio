@@ -6,6 +6,15 @@
 #include "maps.h"
 #include "vectors.h"
 #include "lists.h"
+#include "Callback/Callback.h"
+
+//void (*CallbackType) (const std::string& name, void* data);
+
+void static helloWorldFunc(const std::string& name, void* data)
+{
+	const auto pd = static_cast<int*>(data);
+	std::cout << "Here is the name: " << name << ", and here is the data: " << *pd << std::endl;
+}
 
 int main()
 {
@@ -24,5 +33,12 @@ int main()
 
 
 	practiceLists();
+
+	Callback callback;
+	int a = 4;
+	callback.setCallback(helloWorldFunc, &a);
+
+	callback.invokeCallback();
+
 	return 0;
 }

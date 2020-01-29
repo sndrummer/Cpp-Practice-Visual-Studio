@@ -22,6 +22,12 @@ inline int getOccurrences(std::list<int>& list, const int value)
 	return occurrences;
 }
 
+// Static function outside of a class -- means internal linkage -- this means that each file gets their own version of the function 
+static void cantCallMe()
+{
+	std::cout << "static function called -- this file now has its OWN VERSION OF THIS FUNCTION!!!! " << std::endl;
+}
+
 inline void practiceLists()
 {
 	std::list<int> numberList;
@@ -41,5 +47,6 @@ inline void practiceLists()
 	}
 
 	std::cout << "The number " << 0 << " is in the list " << getOccurrences(numberList, 0) << " times" << std::endl;
-
+	cantCallMe();
 }
+
