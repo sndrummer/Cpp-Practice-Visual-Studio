@@ -7,6 +7,8 @@
 #include "vectors.h"
 #include "lists.h"
 #include "Callback/Callback.h"
+#include "cherno/local_static.h"
+#include "cherno/Singleton.h"
 
 //void (*CallbackType) (const std::string& name, void* data);
 
@@ -39,6 +41,23 @@ int main()
 	callback.setCallback(helloWorldFunc, &a);
 
 	callback.invokeCallback();
+
+	Cherno::Function();
+	Cherno::Function();
+	Cherno::Function();
+	Cherno::Function();
+	Cherno::Function();
+
+
+	// note that boolalpha will print true and false
+	Cherno::Singleton& instance = Cherno::Singleton::getInstance();
+	bool over9000 = instance.itsOver9000();
+	std::cout << std::boolalpha << "Over 9000? " << over9000 << std::endl;
+
+
+	instance.powerUp();
+	over9000 = instance.itsOver9000();
+	std::cout << std::noboolalpha << "Over 9000 after power up? " << over9000 << std::endl;
 
 	return 0;
 }

@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\cherno\Singleton.cpp" />
     <ClCompile Include="src\Callback\Callback.cpp" />
     <ClCompile Include="src\FileWriter.cpp" />
     <ClCompile Include="src\lambdas.cpp" />
@@ -147,7 +148,9 @@
     <ClCompile Include="src\typePunning.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\cherno\Singleton.h" />
     <ClInclude Include="src\Callback\Callback.h" />
+    <ClInclude Include="src\cherno\local_static.h" />
     <ClInclude Include="src\const_pointers.h" />
     <ClInclude Include="src\FileWriter.h" />
     <ClInclude Include="src\lambdas.h" />
