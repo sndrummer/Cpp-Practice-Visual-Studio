@@ -3,8 +3,8 @@
 
 RendererFactory& RendererFactory::getInstance()
 {
-	static RendererFactory factory;
-	return factory;
+	static RendererFactory instance;
+	return instance;
 }
 
 

@@ -8,7 +8,8 @@ class RendererFactory
 public:
 	static RendererFactory& getInstance(); // make it a singleton
 
-	typedef IRenderer* (*CreateCallback)(); // callback function constructor  
+	// callback function constructor, function pointer remember function pointer is returnType (*NameOfFunction) (paramType1, paramType2);
+	typedef IRenderer* (*CreateCallback)();
 	void registerRenderer(const std::string& type, CreateCallback cb);
 	void unregisterRenderer(const std::string& type);
 	IRenderer* createRenderer(const std::string& type);
