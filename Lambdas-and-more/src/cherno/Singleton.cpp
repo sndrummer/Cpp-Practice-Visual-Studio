@@ -23,20 +23,3 @@ namespace Cherno
 		return powerLevel;
 	}
 }
-
-
-// Cherno::Singleton& Cherno::Singleton::getInstance()
-// 	{
-// 		static Cherno::Singleton instance;
-// 		return instance;
-// 	}
-// 	
-// 	bool Cherno::Singleton::itsOver9000() const
-// 	{
-// 		return powerLevel > 9000;
-// 	}
-// 	
-// 	void Cherno::Singleton::powerUp()
-// 	{
-// 		powerLevel += 100;
-// 	}

@@ -138,6 +138,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\factory\RendererFactory.cpp" />
+    <ClCompile Include="src\factory\IRenderer.cpp" />
     <ClCompile Include="src\cherno\Singleton.cpp" />
     <ClCompile Include="src\Callback\Callback.cpp" />
     <ClCompile Include="src\FileWriter.cpp" />
@@ -146,8 +148,11 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\parameterPacks.cpp" />
     <ClCompile Include="src\typePunning.cpp" />
+    <ClCompile Include="src\Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\factory\RendererFactory.h" />
+    <ClInclude Include="src\factory\IRenderer.h" />
     <ClInclude Include="src\cherno\Singleton.h" />
     <ClInclude Include="src\Callback\Callback.h" />
     <ClInclude Include="src\cherno\local_static.h" />
@@ -160,6 +165,7 @@
     <ClInclude Include="src\parameterPacks.h" />
     <ClInclude Include="src\typePunning.h" />
     <ClInclude Include="src\vectors.h" />
+    <ClInclude Include="src\Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
