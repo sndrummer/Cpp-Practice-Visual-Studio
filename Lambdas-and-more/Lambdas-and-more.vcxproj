@@ -139,7 +139,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\factory\RendererFactory.cpp" />
-    <ClCompile Include="src\factory\IRenderer.cpp" />
     <ClCompile Include="src\cherno\Singleton.cpp" />
     <ClCompile Include="src\Callback\Callback.cpp" />
     <ClCompile Include="src\FileWriter.cpp" />
