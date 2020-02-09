@@ -21,11 +21,12 @@ void RendererFactory::unregisterRenderer(const std::string& type)
 
 IRenderer* RendererFactory::createRenderer(const std::string& type)
 {
-	auto it = mRenderers.find(type);
+	const auto it = mRenderers.find(type);
 
 	if (it != mRenderers.end())
 	{
 		// call the creation callback
 		return it->second();
 	}
+	return nullptr;
 }
