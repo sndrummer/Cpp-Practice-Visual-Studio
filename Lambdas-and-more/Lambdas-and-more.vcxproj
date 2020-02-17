@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\observer\Orcs.cpp" />
     <ClCompile Include="src\factory\RendererFactory.cpp" />
     <ClCompile Include="src\cherno\Singleton.cpp" />
     <ClCompile Include="src\Callback\Callback.cpp" />
@@ -145,11 +146,17 @@
     <ClCompile Include="src\lambdas.cpp" />
     <ClCompile Include="src\functionPointers.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\observer\ISubject.cpp" />
     <ClCompile Include="src\parameterPacks.cpp" />
     <ClCompile Include="src\typePunning.cpp" />
     <ClCompile Include="src\Test.cpp" />
+    <ClCompile Include="src\factory\UserRenderer.cpp" />
+    <ClCompile Include="src\observer\Weather.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\observer\Orcs.h" />
+    <ClInclude Include="src\observer\ISubject.h" />
+    <ClInclude Include="src\observer\IObserver.h" />
     <ClInclude Include="src\factory\RendererFactory.h" />
     <ClInclude Include="src\factory\IRenderer.h" />
     <ClInclude Include="src\cherno\Singleton.h" />
@@ -161,10 +168,17 @@
     <ClInclude Include="src\functionPointers.h" />
     <ClInclude Include="src\lists.h" />
     <ClInclude Include="src\maps.h" />
+    <ClInclude Include="src\observer\WeatherType.h" />
     <ClInclude Include="src\parameterPacks.h" />
     <ClInclude Include="src\typePunning.h" />
     <ClInclude Include="src\vectors.h" />
     <ClInclude Include="src\Test.h" />
+    <ClInclude Include="src\factory\UserRenderer.h" />
+    <ClInclude Include="src\observer\WeatherObserver.h" />
+    <ClInclude Include="src\observer\Weather.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\observer\readme.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
