@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\datastructures\MinHeap.cpp" />
     <ClCompile Include="src\observer\Orcs.cpp" />
     <ClCompile Include="src\factory\RendererFactory.cpp" />
     <ClCompile Include="src\cherno\Singleton.cpp" />
@@ -154,6 +155,7 @@
     <ClCompile Include="src\observer\Weather.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\datastructures\MinHeap.h" />
     <ClInclude Include="src\observer\Orcs.h" />
     <ClInclude Include="src\observer\ISubject.h" />
     <ClInclude Include="src\observer\IObserver.h" />

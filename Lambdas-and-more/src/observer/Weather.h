@@ -3,7 +3,6 @@
 #include "WeatherType.h"
 namespace Observer
 {
-
 	class Weather : public ISubject
 	{
 	public:

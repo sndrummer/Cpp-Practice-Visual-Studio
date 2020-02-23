@@ -2,7 +2,7 @@
 
 namespace Observer
 {
-	void ISubject::subscribe(int message, IObserver* observer)
+	void ISubject::subscribe(const int message, IObserver* observer)
 	{
 		if (observer == nullptr) return;
 
@@ -27,7 +27,7 @@ namespace Observer
 
 	}
 
-	void ISubject::notify(int message)
+	void ISubject::notify(const int message)
 	{
 		auto observers = mObservers[message];
 		for (auto observer : observers)

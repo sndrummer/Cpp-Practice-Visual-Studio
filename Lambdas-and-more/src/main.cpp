@@ -78,6 +78,9 @@ int main()
 	weather.timePasses();
 	weather.timePasses();
 	weather.timePasses();
+
+
+	vectorPractice();
 	
 	
 	return 0;
