@@ -153,6 +153,7 @@
     <ClCompile Include="src\Test.cpp" />
     <ClCompile Include="src\factory\UserRenderer.cpp" />
     <ClCompile Include="src\observer\Weather.cpp" />
+    <ClCompile Include="src\templates\Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\datastructures\MinHeap.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="src\factory\UserRenderer.h" />
     <ClInclude Include="src\observer\WeatherObserver.h" />
     <ClInclude Include="src\observer\Weather.h" />
+    <ClInclude Include="src\templates\Stack.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\observer\readme.txt" />

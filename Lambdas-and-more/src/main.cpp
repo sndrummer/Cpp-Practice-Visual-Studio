@@ -11,6 +11,7 @@
 #include "cherno/Singleton.h"
 #include  "observer/Orcs.h"
 #include "observer/Weather.h"
+#include "templates/Stack.h"
 
 //void (*CallbackType) (const std::string& name, void* data);
 
@@ -62,13 +63,13 @@ void tests()
 	std::cout << std::noboolalpha << "Over 9000 after power up? " << over9000 << std::endl;
 }
 
-using namespace Observer;
-int main()
+
+void testObserverPattern()
 {
 	// Test the observer pattern
 
-	Weather weather(WeatherType::SUNNY);
-	Orcs orcs;
+	Observer::Weather weather(Observer::WeatherType::SUNNY);
+	Observer::Orcs orcs;
 
 	weather.addObserver(&orcs);
 
@@ -78,10 +79,77 @@ int main()
 	weather.timePasses();
 	weather.timePasses();
 	weather.timePasses();
+}
+
+// comment this out to disable memory allocation.
+// #define TESTING_MEMORY_ALLOCATION
+
+#ifdef TESTING_MEMORY_ALLOCATION
+
+struct AllocationMetrics
+{
+	uint32_t totalAllocated = 0;
+	uint32_t totalFreed = 0;
+
+	uint32_t currentUsage() { return totalAllocated - totalFreed; };
+};
+
+static AllocationMetrics s_allocation_metrics;
+
+void* operator new(size_t size)
+{
+	s_allocation_metrics.totalAllocated += size;
+	std::cout << "Allocating " << size << " bytes" << std::endl;
+	return malloc(size);
+}
+
+void operator delete(void* memory, size_t size)
+{
+	s_allocation_metrics.totalFreed += size;
+	std::cout << "Freeing " << size << " bytes" << std::endl;
+	free(memory);
+}
 
 
-	vectorPractice();
-	
-	
+static void printMemoryUsage()
+{
+	std::cout << "Memory usage " << s_allocation_metrics.currentUsage() << " bytes" << std::endl;
+}
+
+void testMemoryAllocation()
+{
+	// vectorPractice();
+	printMemoryUsage();
+	{
+		std::string a = "Judy Judy Judy Judy Judy Judy Judy Judy Judy You do can't know Judy";
+		printMemoryUsage();
+	}
+	printMemoryUsage();
+}
+
+#endif
+
+// Explicit Stack<int> template
+void testTemplates()
+{
+	using namespace Templates;
+	IntStack myStack;
+
+	myStack.push(1);
+	myStack.push(2);
+	myStack.push(3);
+
+	std::cout << "Here is the stack before the pop: " << myStack << std::endl;
+	std::cout << "We are popping here is the value: " << myStack.pop() << std::endl;
+	std::cout << "We are popping here is the value: " << myStack.pop() << std::endl;
+	std::cout << "We are popping here is the value: " << myStack.pop() << std::endl;
+
+	std::cout << "Here is the stack after: " << myStack << std::endl;
+}
+
+
+int main()
+{
+	testTemplates();
 	return 0;
 }

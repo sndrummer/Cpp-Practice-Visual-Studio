@@ -2,11 +2,10 @@
 
 namespace Observer
 {
-	class IObserver
-	{
-	public:
-		virtual ~IObserver() = default;
-		virtual void update(int message) = 0;
-		
-	};
+class IObserver
+{
+public:
+	virtual ~IObserver() = default;
+	virtual void update(int message) = 0;
+};
 }
